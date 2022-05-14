@@ -1,0 +1,36 @@
+
+<div class="container my-5 py-5">
+
+
+    <form class="container" *ngIf="projectName">
+        <div class="form-group offset-3 mt-5 mb-4">
+          <input type="text" [(ngModel)]="task.name" [ngModelOptions]="{standalone: true}" class="form-control  col-8 rounded-pill" placeholder="name of the task" aria-describedby="emailHelp">
+          <small id="emailHelp" class="form-text ml-4 text-muted">it must be unique</small>
+        </div>
+        <div class="form-group">
+
+          <input type="text" [(ngModel)]="task.deadline" [ngModelOptions]="{standalone: true}" class="form-control offset-3 col-6 rounded-pill" placeholder="deadline of the task      eg : 23rd dec">
+        </div>
+        <div class="ml-5">
+        <button type="submit" class="btn btn-warning offset-5 mt-4 mb-5"  (click)="addTask()">Add..</button>
+        
+        </div>
+      </form>
+
+
+      <form class="container" *ngIf="taskName">
+        <div class="form-group offset-3 mt-5 mb-4">
+          <input type="text" [(ngModel)]="task1.name" [ngModelOptions]="{standalone: true}" class="form-control  col-8 rounded-pill" placeholder="name of the task" aria-describedby="emailHelp">
+          <small id="emailHelp" class="form-text ml-4 text-muted">it must be unique</small>
+        </div>
+        <div class="form-group">
+
+          <input type="text" [(ngModel)]="task1.deadline" [ngModelOptions]="{standalone: true}" class="form-control offset-3 col-6 rounded-pill" placeholder="deadline of the task      eg : 23rd dec">
+        </div>
+        <div class="ml-5">
+        
+        <button type="submit" class="btn btn-warning offset-5 mt-4 mb-5" (click)="editTask(task1)">Edit..</button>
+        </div>
+      </form>
+
+</div>

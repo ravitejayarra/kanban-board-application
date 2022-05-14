@@ -1,0 +1,177 @@
+<div class="container-fluid">
+<div class="row mt-4">
+    <div class="col border border-success ">
+        <h1 class="text-center pb-2 border-bottom border-success">Pipeline</h1>
+
+        <div class="container" > 
+            
+
+              <!--begin -->
+              <div class="card border-primary my-3 w-20 row" *ngFor="let task of pipeline_tasks">
+                <div class="card-header">
+              <button class="btn" (click) ="editTask(task.id)"><i class="bi bi-pencil-fill mx-2"></i></button>
+              <button class="btn btn-warning" (click)="deleteTask(task.id)"><i class="bi bi-trash mx-2"></i></button>
+              <button class="btn"  (click)="moveTask(task,0)"><i class="bi bi-arrow-right-square-fill mx-2"></i></button>
+
+                </div>
+                <div class="card-body text-primary">
+                  <h5 class="card-title">{{task.name}}</h5>
+                  <p class="card-text">{{task.deadline}}</p>
+                </div>
+                
+                    
+              </div>
+                <!--end -->
+               
+                 <!--begin -->
+              <div class="card border-success my-3 w-20 row" >
+                <div class="card-header justify-content-center">
+                       <button  (click)="addTask()" class="text-center mx-5 btn btn-success" style="text-decoration: none;">ADD Task<i class="bi bi-plus-square ml-2"></i></button> 
+                </div>
+               
+                
+                    
+              </div>
+                <!--end -->
+
+        </div>
+        
+
+    </div>
+
+
+
+
+
+
+
+
+    <div class="col border border-success">
+
+        <h1 class="text-center pb-2 border-bottom border-success">Todo</h1>
+     
+        
+        <div class="container" > 
+            
+
+          <!--begin -->
+          <div class="card border-success my-3 w-20 row" *ngFor="let task of todo_tasks">
+            <div class="card-header">
+          <button class="btn" (click) ="editTask(task.id)" ><i class="bi bi-pencil-fill mx-2"></i></button>
+          <button class="btn btn-warning" (click)="deleteTask(task.id)"><i class="bi bi-trash mx-2"></i></button>
+          <button class="btn"  (click)="moveTask(task,1)"><i class="bi bi-arrow-right-square-fill mx-2"></i></button>
+
+            </div>
+            <div class="card-body text-primary">
+              <h5 class="card-title">{{task.name}}</h5>
+              <p class="card-text">{{task.deadline}}</p>
+            </div>
+            
+                
+          </div>
+            <!--end -->
+           
+             
+
+    </div>
+    
+
+
+
+
+    </div>  <!-- end of todo-->
+    <div class="col border border-success">
+
+        <h1 class="text-center pb-2 border-bottom border-success">Progress</h1>
+
+
+        <div class="container" > 
+            
+
+          <!--begin -->
+          <div class="card border-warning my-3 w-20 row" *ngFor="let task of progress_tasks">
+            <div class="card-header">
+          <button class="btn" (click) ="editTask(task.id)"><i class="bi bi-pencil-fill mx-2"></i></button>
+          <button class="btn btn-warning" (click)="deleteTask(task.id)"><i class="bi bi-trash mx-2"></i></button>
+          <button class="btn"  (click)="moveTask(task,2)"><i class="bi bi-arrow-right-square-fill mx-2"></i></button>
+
+            </div>
+            <div class="card-body text-primary">
+              <h5 class="card-title">{{task.name}}</h5>
+              <p class="card-text">{{task.deadline}}</p>
+            </div>
+            
+                
+          </div>
+            <!--end -->
+           
+             
+
+    </div>
+
+
+
+    </div>
+    <div class="col border border-success">
+        <h1 class="text-center pb-2 border-bottom border-success">Review</h1>
+
+        <div class="container" > 
+            
+
+          <!--begin -->
+          <div class="card border-primary my-3 w-20 row" *ngFor="let task of review_tasks">
+            <div class="card-header">
+          <button class="btn" (click) ="editTask(task.id)"><i class="bi bi-pencil-fill mx-2"></i></button>
+          <button class="btn btn-warning" (click)="deleteTask(task.id)"><i class="bi bi-trash mx-2"></i></button>
+          <button class="btn"  (click)="moveTask(task,3)"><i class="bi bi-arrow-right-square-fill mx-2"></i></button>
+
+            </div>
+            <div class="card-body text-primary">
+              <h5 class="card-title">{{task.name}}</h5>
+              <p class="card-text">{{task.deadline}}</p>
+            </div>
+            
+                
+          </div>
+            <!--end -->
+           
+             
+
+    </div>
+
+    </div>
+    <div class="col border border-success">
+
+        <h1 class="text-center pb-2 border-bottom border-success">Closed</h1>
+
+        <div class="container" > 
+            
+
+          <!--begin -->
+          <div class="card border-primary my-3 w-20 row" *ngFor="let task of closed_tasks">
+            <div class="card-header">
+          
+          <button class="btn btn-warning" (click)="deleteTask(task.id)"><i class="bi bi-trash mx-2"></i></button>
+          
+
+            </div>
+            <div class="card-body text-primary">
+              <h5 class="card-title">{{task.name}}</h5>
+              <p class="card-text">{{task.deadline}}</p>
+            </div>
+            
+                
+          </div>
+            <!--end -->
+           
+             
+
+    </div>
+
+
+
+    </div>
+
+
+</div>
+</div>
